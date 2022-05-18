@@ -147,5 +147,7 @@ function addIntern(){
    </div>`
     })
    }
+
+   team();
    
    
