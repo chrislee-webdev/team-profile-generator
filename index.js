@@ -27,9 +27,14 @@ function team(){
                 break;
             case "add intern":
                 addIntern();
-                break
+                break;
             case "add engineer":
                 addEngineer();
+                break;
+
+            default:
+                addManager();
+                break;
         }
     })
 }
