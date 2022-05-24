@@ -15,13 +15,13 @@ function team(){
         {
             type:"list",
             message:"What would you like to do?",
-            name: "choice",
-            choice: ["add manager", "add intern", "add engineer", "exit"],
+            name: "choices",
+            choices: ["add manager", "add intern", "add engineer", "exit"],
 
         }
     ])
     .then(function (userChoice){
-        switch(userChoice.choice){
+        switch(userChoice.choices){
             case "add manager":
                 addManager();
                 break;
@@ -73,8 +73,6 @@ function addManager(){
     </div>
     </div>`
  })
-
-
 }
 
 function addIntern(){
@@ -146,7 +144,7 @@ function addIntern(){
         </div>`
     })
    }
-
+   
    team();
    
    
