@@ -42,13 +42,11 @@ function team(){
 function addManager(){
  inquirer.prompt([
      {
-
         type: "input",
         message: "enter manager name",
         name: "employeename",
      },
      {
-
         type: "input",
         message: "enter manager id",
         name: "employeeid",
@@ -60,7 +58,6 @@ function addManager(){
         name: "employeeEmail",
      },
      {
-
         type: "input",
         message: "enter manager office number",
         name: "officenumber",
@@ -104,40 +101,35 @@ function addIntern(){
         },
     ]).then(function(response){
         const hireIntern = new Intern(response.employeename,response.employeeid, response.employeeEmail, response.school)
-   managerHTML+=`<div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
-   <div class="card-header">${hireIntern.name}</div>
-   <div class="card-body">
-     <h5 class="card-title">${hireIntern.email}</h5>
-     <h5 class="card-title">${hireIntern.employeeid}</h5>
-     <h5 class="card-title">${hireIntern.school}</h5>
-   </div>
-   </div>`
+        managerHTML+=`<div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+        <div class="card-header">${hireIntern.name}</div>
+        <div class="card-body">
+        <h5 class="card-title">${hireIntern.email}</h5>
+        <h5 class="card-title">${hireIntern.employeeid}</h5>
+        <h5 class="card-title">${hireIntern.school}</h5>
+        </div>
+        </div>`
     })
-
    }
 
    function addEngineer(){
     inquirer.prompt([
         {
-   
            type: "input",
            message: "enter engineer name",
            name: "employeename",
         },
         {
-   
            type: "input",
            message: "enter engineer id",
            name: "employeeid",
         },
         {
-   
            type: "input",
            message: "enter engineer email",
            name: "employeeEmail",
         },
         {
-   
            type: "input",
            message: "enter engineer github",
            name: "github",
@@ -150,8 +142,8 @@ function addIntern(){
         <h5 class="card-title">${hireEngineer.email}</h5>
         <h5 class="card-title">${hireEngineer.employeeid}</h5>
         <h5 class="card-title">${hireEngineer.github}</h5>
-    </div>
-    </div>`
+        </div>
+        </div>`
     })
    }
 
