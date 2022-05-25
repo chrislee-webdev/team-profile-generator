@@ -16,7 +16,7 @@ function team(){
             type:"list",
             message:"What would you like to do?",
             name: "choices",
-            choices: ["add manager", "add intern", "add engineer", "exit"],
+            choices: ["add manager", "add intern", "add engineer", "build team"],
 
         }
     ])
@@ -33,7 +33,7 @@ function team(){
                 break;
 
             default:
-                addManager();
+                buildTeam();
                 break;
         }
     })
@@ -145,6 +145,13 @@ function addIntern(){
     })
    }
    
+function buildTeam() {
+    fs.writeFile('src.index.html', buildTeam, err => {
+        if (err) throw err;
+        console.log('Page is ready!')
+    })
+}
+
    team();
    
    
