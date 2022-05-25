@@ -68,7 +68,9 @@ function addManager(){
     <h5 class="card-title">${hireManager.officenumber}</h5>
     </div>
     </div>`
+    buildTeam()
  })
+ 
 }
 
 function addIntern(){
@@ -103,7 +105,10 @@ function addIntern(){
         <h5 class="card-title">${hireIntern.school}</h5>
         </div>
         </div>`
+
+        buildTeam()
     })
+    
    }
 
    function addEngineer(){
@@ -138,7 +143,10 @@ function addIntern(){
         <h5 class="card-title">${hireEngineer.github}</h5>
         </div>
         </div>`
+
+        buildTeam()
     })
+    
 }
    
 function buildTeam() {
@@ -148,6 +156,6 @@ function buildTeam() {
     })
 }
 
-   team();
+team();
    
    
