@@ -68,6 +68,7 @@ function addManager(){
     <h5 class="card-title">${hireManager.officenumber}</h5>
     </div>
     </div>`
+    team()
     buildTeam()
  })
  
@@ -105,7 +106,7 @@ function addIntern(){
         <h5 class="card-title">${hireIntern.school}</h5>
         </div>
         </div>`
-
+        team()
         buildTeam()
     })
     
@@ -143,7 +144,7 @@ function addIntern(){
         <h5 class="card-title">${hireEngineer.github}</h5>
         </div>
         </div>`
-
+        team()
         buildTeam()
     })
     
