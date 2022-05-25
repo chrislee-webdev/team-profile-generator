@@ -62,6 +62,7 @@ function addManager(){
         message: "enter manager office number",
         name: "officenumber",
      },
+
  ]).then(function(response){
      const hireManager = new Manager(response.employeename,response.employeeid, response.emplyeeEmail, response.officenumber) 
      managerHTML += `<div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
@@ -143,10 +144,10 @@ function addIntern(){
         </div>
         </div>`
     })
-   }
+}
    
 function buildTeam() {
-    fs.writeFile('src.index.html', buildTeam, err => {
+    fs.writeFile('src/index.html', managerHTML, err => {
         if (err) throw err;
         console.log('Page is ready!')
     })
