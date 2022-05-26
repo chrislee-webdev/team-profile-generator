@@ -59,7 +59,7 @@ function addManager(){
      },
 
  ]).then(function(response){
-     const hireManager = new Manager(response.employeename,response.employeeid, response.emplyeeEmail, response.officenumber) 
+     const hireManager = new Manager(response.employeename, response.employeeid, response.employeeEmail, response.officenumber) 
      managerHTML += `<div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
     <div class="card-header">${hireManager.name}</div>
     <div class="card-body">
