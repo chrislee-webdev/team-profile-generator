@@ -64,8 +64,8 @@ function addManager(){
     <div class="card-header">${hireManager.name}</div>
     <div class="card-body">
     <h5 class="card-title">${hireManager.email}</h5>
-    <h5 class="card-title">${hireManager.employeeid}</h5>
-    <h5 class="card-title">${hireManager.officenumber}</h5>
+    <h5 class="card-title">${hireManager.id}</h5>
+    <h5 class="card-title">${hireManager.officeNumber}</h5>
     </div>
     </div>`
     team()
@@ -102,7 +102,7 @@ function addIntern(){
         <div class="card-header">${hireIntern.name}</div>
         <div class="card-body">
         <h5 class="card-title">${hireIntern.email}</h5>
-        <h5 class="card-title">${hireIntern.employeeid}</h5>
+        <h5 class="card-title">${hireIntern.id}</h5>
         <h5 class="card-title">${hireIntern.school}</h5>
         </div>
         </div>`
@@ -140,7 +140,7 @@ function addIntern(){
         <div class="card-header">${hireEngineer.name}</div>
         <div class="card-body">
         <h5 class="card-title">${hireEngineer.email}</h5>
-        <h5 class="card-title">${hireEngineer.employeeid}</h5>
+        <h5 class="card-title">${hireEngineer.id}</h5>
         <h5 class="card-title">${hireEngineer.github}</h5>
         </div>
         </div>`
@@ -151,7 +151,26 @@ function addIntern(){
 }
    
 function buildTeam() {
-    fs.writeFile('src/index.html', managerHTML, err => {
+    const HTML = `<!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Team Builder</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+      </head>
+      <body>
+      <header class="bg-primary text-center text-white">
+        <h1>Team Builder</h1>
+        </header>
+        <main class="container d-flex flex-wrap justify-content-evenly">
+        ${managerHTML}
+      
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+      </body>
+    </html>`
+    fs.writeFileSync('src/index.html', HTML, err => {
         if (err) throw err;
         console.log('Page is ready!')
     })
